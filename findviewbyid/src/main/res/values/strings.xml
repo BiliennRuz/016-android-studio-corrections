@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">findViewById</string>
+    <string name="toast_accueil">Je suis un toast</string>
+
+</resources>
