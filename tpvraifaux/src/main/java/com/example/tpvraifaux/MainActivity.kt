@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             score++
             showScore()
         }
-        if(index++ < (arrayListQR.size -1)){
+        if(++index <= (arrayListQR.size -1)){
             //Affichage question suivantes
             binding.qr = arrayListQR[index]
         }
