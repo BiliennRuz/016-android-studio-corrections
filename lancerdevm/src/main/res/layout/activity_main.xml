@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="valDe"
+            type="int" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,22 +28,11 @@
             android:id="@+id/textViewValueDice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@{String.valueOf(valDe)}"
             android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:clickable="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_baseline_drag_indicator_24" />
 
         <EditText
             android:id="@+id/editTextMaxFaces"
@@ -64,6 +55,110 @@
             android:text="Valider"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/editTextMaxFaces" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="onClick"
+            android:text="Lancer 6"
+            app:layout_constraintEnd_toStartOf="@+id/button12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewValueDice" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="onClick"
+            android:text="Lancer 12"
+            app:layout_constraintEnd_toStartOf="@+id/button20"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button6"
+            app:layout_constraintTop_toBottomOf="@+id/textViewValueDice" />
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="onClick"
+            android:text="Lancer 20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button12"
+            app:layout_constraintTop_toBottomOf="@+id/textViewValueDice" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="onClick"
+            android:text="Lancer 4"
+            app:layout_constraintEnd_toStartOf="@+id/button8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="onClick"
+            android:text="Lancer 8"
+            app:layout_constraintEnd_toStartOf="@+id/button16"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button4"
+            app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="onClick"
+            android:text="Lancer 16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button8"
+            app:layout_constraintTop_toBottomOf="@+id/button20" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@{String.valueOf(valDe)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{String.valueOf(valDe)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{String.valueOf(valDe)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

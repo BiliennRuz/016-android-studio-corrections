@@ -1,13 +1,15 @@
 package com.example.lancerdevm
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.lancerdevm.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , View.OnClickListener {
     lateinit var binding: ActivityMainBinding
     lateinit var viewModel: LancerDeViewModel
 
@@ -19,12 +21,11 @@ class MainActivity : AppCompatActivity() {
 
         //Initialisation de champs UI
         binding.editTextMaxFaces.setText(viewModel.nbFaces.toString())
-        binding.textViewValueDice.text = viewModel.valeurDe.toString()
 
-        binding.floatingActionButton.setOnClickListener {
-            viewModel.lancerDe()
-            binding.textViewValueDice.text = viewModel.valeurDe.toString()
-        }
+        viewModel.valeurDe.observe(this, Observer {
+            binding.valDe = it
+        })
+
         binding.buttonValiderFaces.setOnClickListener {
             val nbFacesMax = binding.editTextMaxFaces.text.toString().toIntOrNull()
             if(nbFacesMax == null){
@@ -34,6 +35,17 @@ class MainActivity : AppCompatActivity() {
                 viewModel.nbFaces = nbFacesMax
             }
 
+        }
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.button6 -> viewModel.lancerDe(6)
+            R.id.button16 -> viewModel.lancerDe(16)
+            R.id.button12 -> viewModel.lancerDe(12)
+            R.id.button4 -> viewModel.lancerDe(4)
+            R.id.button20 -> viewModel.lancerDe(20)
+            R.id.button8 -> viewModel.lancerDe(8)
         }
     }
 }
