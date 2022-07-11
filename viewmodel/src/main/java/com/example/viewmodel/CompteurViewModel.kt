@@ -1,13 +1,20 @@
 package com.example.viewmodel
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-
 class CompteurViewModel : ViewModel() {
-    var compteur = 0;
+    var compteur = MutableLiveData<Int>();
 
-    fun increment() = ++compteur
+    init {
+        compteur.value = 0
+    }
+
+    fun increment() {
+        compteur.value = compteur.value?.inc()
+    }
 
     //fun increment() : Int{
     //    return ++compteur;
     //}
 }
+
