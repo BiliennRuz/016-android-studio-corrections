@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/formFragment">
+
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.example.histoire.FormFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form" >
+        <action
+            android:id="@+id/actionFormToHistoire"
+            app:destination="@id/histoireFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/histoireFragment"
+        android:name="com.example.histoire.HistoireFragment"
+        android:label="fragment_histoire"
+        tools:layout="@layout/fragment_histoire" >
+        <argument
+            android:name="histoire"
+            app:argType="com.example.histoire.Histoire" />
+    </fragment>
+</navigation>

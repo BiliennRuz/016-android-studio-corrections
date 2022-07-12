@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/actionbar/src/main/res/menu/menu_main.xml" value="0.5" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/aleatoire/src/main/res/layout/activity_main.xml" value="0.40520833333333334" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/app/src/main/res/drawable/ic_baseline_outdoor_grill_24.xml" value="0.2995" />
@@ -10,9 +11,12 @@
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/app/src/main/res/layout/activity_main.xml" value="0.22010869565217392" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/databinding/src/main/res/layout/activity_main.xml" value="0.38636363636363635" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/findviewbyid/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/histoire/src/main/res/layout/activity_main.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/histoire/src/main/res/layout/fragment_form.xml" value="0.33" />
+        <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/histoire/src/main/res/layout/fragment_histoire.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/interface1/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/interfacetp/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/lancerdevm/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/lancerdevm/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/lifecycle/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/navigationapi/src/main/res/layout/activity_main.xml" value="0.3434343434343434" />
         <entry key="..\:/Users/qrouet/AndroidStudioProjects/MyFirstApp/navigationapi/src/main/res/layout/fragment_button.xml" value="0.3434343434343434" />

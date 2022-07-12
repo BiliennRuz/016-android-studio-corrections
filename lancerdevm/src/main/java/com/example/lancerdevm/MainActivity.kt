@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         //Initialisation de champs UI
         binding.editTextMaxFaces.setText(viewModel.nbFaces.toString())
 
-        viewModel.valeurDe.observe(this, Observer {
-            binding.valDe = it
-        })
+        //A chaque fois que la valeurDé change, je l'affecte à mon dataBinding
+        //ce qui occasionne le changement des 4 textView affichant la valeur du dé
+        viewModel.valeurDe.observe(this, Observer { binding.valDe = it })
 
         binding.buttonValiderFaces.setOnClickListener {
             val nbFacesMax = binding.editTextMaxFaces.text.toString().toIntOrNull()
@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
 
         }
     }
-
+    //A chaque fois qu'un click est fait sur les boutons de lancer,
+    //on déclenche la méthode de lancer en fonction du bouton cliqué
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.button6 -> viewModel.lancerDe(6)
