@@ -1,9 +1,9 @@
 package com.example.room
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
@@ -14,10 +14,14 @@ class MainActivity : AppCompatActivity() {
         val app =  requireNotNull(application)
         vm = ViewModelProvider(this,VMFactory(app))
             .get(PlanteViewModel::class.java)
-        val button = findViewById<Button>(R.id.button)
-        button.setOnClickListener {
-            Toast.makeText(this, vm.listePlantes.toString(), Toast.LENGTH_SHORT).show()
-        }
+
+        vm.listePlantes.observe(this, Observer {
+            while (true) {
+                Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
+            }
+        })
+
+
         //thread {
         //    PlanteDatabase.getInstance(this).planteDao().insert(
         //        Plante(0,"Blette","legumineux", false),

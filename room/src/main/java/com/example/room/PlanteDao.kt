@@ -1,5 +1,6 @@
 package com.example.room
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
@@ -8,7 +9,7 @@ interface PlanteDao {
     fun insert(plante: Plante)
 
     @Query("SELECT * FROM Plante")
-    suspend fun getAll() : List<Plante>
+    fun getAll() : LiveData<List<Plante>>
 
     @Query("SELECT * FROM Plante WHERE perenne = :perenne")
     fun getAllPlantesByPerennite(perenne : Boolean): List<Plante>
